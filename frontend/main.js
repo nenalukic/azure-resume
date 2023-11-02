@@ -4,7 +4,7 @@
 // });
 
 
-const functionApi = ''; 
+const functionApi = 'http://localhost:7071/api/GetCounter'; 
 
 const getVisitCount = () => {
     let count = 30;

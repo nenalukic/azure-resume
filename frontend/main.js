@@ -3,12 +3,12 @@
 //     getVisitCount();
 // });
 
-
-const functionApi = 'http://localhost:7071/api/GetCounter'; 
+const functionApiUrl = 'https://getmyresumecounter.azurewebsites.net/api/GetCounter?code=4htINawlMfvhJkUQ91g6w4OuW-h5jbr_gJHUyPKSxIJVAzFuW-ZrMQ==';
+const localFunctionApi = 'http://localhost:7071/api/GetCounter'; 
 
 const getVisitCount = () => {
     let count = 30;
-    fetch(functionApi)
+    fetch(functionApiUrl)
     .then(response => {
         return response.text()
     })
@@ -18,7 +18,7 @@ const getVisitCount = () => {
         document.getElementById('counter').innerText = count;
     }).catch(function(error) {
         console.log(error);
-      });
+    });
     return count;
 }
 

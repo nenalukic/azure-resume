@@ -2,7 +2,7 @@ import logging
 
 import azure.functions as func
 
-#from azure.cosmos import exceptions, CosmosClient, PartitionKey
+
 
 
 def main(req: func.HttpRequest, inputDocument: func.DocumentList,

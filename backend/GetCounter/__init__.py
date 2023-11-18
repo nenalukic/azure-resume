@@ -4,7 +4,7 @@ import azure.functions as func
 
 
 
-
+# HTTP Request
 def main(req: func.HttpRequest, inputDocument: func.DocumentList,
          outputDocument: func.Out[func.Document]) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')

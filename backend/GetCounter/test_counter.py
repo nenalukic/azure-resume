@@ -3,7 +3,6 @@ from unittest.mock import Mock
 import azure.functions as func
 from __init__ import main
 
-
 # Testing counter function
 class TestAzureFunction(unittest.TestCase):
     def test_main_function(self):

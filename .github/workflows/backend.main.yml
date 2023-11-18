@@ -18,6 +18,11 @@ jobs:
     steps:
     - name: 'Checkout GitHub Action'
       uses: actions/checkout@v3
+      
+    - name: 'Login via Azure CLI'
+      uses: azure/login@v1
+      with:
+          creds: ${{ secrets.AZURE_CREDENCIALS }}
 
     - name: Setup Python ${{ env.PYTHON_VERSION }} Environment
       uses: actions/setup-python@v4

@@ -40,7 +40,7 @@ jobs:
     - name: 'Unittest'
       run: |
         pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
-        unittest ./GetCounter/test_counter.py --junitxml=test-results.xml 
+        python -m unittest ./GetCounter/test_counter.py --junitxml=test-results.xml 
 
     - name: 'Run Azure Functions Action'
       uses: Azure/functions-action@v1

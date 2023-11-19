@@ -32,15 +32,15 @@ jobs:
     - name: 'Resolve Project Dependencies Using Pip'
       shell: bash
       run: |
-        pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/'
+        pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
         python -m pip install --upgrade pip
         pip3 install -r requirements.txt --target=".python_packages/lib/site-packages"
         popd
 
     - name: 'Unittest'
       run: |
-        pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
-        python -m unittest ./GetCounter/test_counter.py
+        pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/GetCounter'
+        python -m unittest test_counter.py
 
     - name: 'Run Azure Functions Action'
       uses: Azure/functions-action@v1
